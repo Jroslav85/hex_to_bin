@@ -27,33 +27,25 @@ public class Main {
     }
 	
 	private static String enteringBinNumber(Scanner console) {
-		String binaryNumber;
+		
         while (true) {
             try {
-                BinaryNumberNormalizer bnv = new BinaryNumberNormalizer(
-                        console.next());
-                binaryNumber = bnv.getCorrectNumber(bnv.getBinaryNumber());
-                break;
+                BinaryNumberNormalizer bnv = new BinaryNumberNormalizer();
+                return bnv.getCorrectNumber(console.next());
             } catch (Exception e) {
                 System.out.println("ошибка ввода, еще раз ");
             }
         }
-		return binaryNumber;
 	}
 
 	private static String enteringHexNumber(Scanner console) {
-		String hexNumber;
         while(true) {
             try {
-                HexNumberNormalizer hnv = new HexNumberNormalizer(console.next());
-                hexNumber = hnv.getCorrectNumber(hnv.getHexNumber());
-                break;
+                HexNumberNormalizer hnv = new HexNumberNormalizer();
+                return hnv.getCorrectNumber(console.next());
             } catch (Exception e) {
                 System.out.println("ошибка ввода, еще раз ");
             }
         }
-		return hexNumber;
 	}
-
-
 }
