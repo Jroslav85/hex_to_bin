@@ -6,7 +6,7 @@ public class HexNumberNormalizer implements Normalizer {
 
     // constructor
     public HexNumberNormalizer(String HexNumber) {
-        this.setHexNumber(HexNumber);
+        this.HexNumber = HexNumber;
     }
 
     // methods
@@ -23,9 +23,5 @@ public class HexNumberNormalizer implements Normalizer {
     // getter and setter
     public String getHexNumber() {
         return HexNumber;
-    }
-
-    public void setHexNumber(String hexNumber) {
-        HexNumber = hexNumber;
     }
 }
