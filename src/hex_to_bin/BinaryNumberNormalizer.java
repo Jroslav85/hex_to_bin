@@ -17,5 +17,4 @@ public class BinaryNumberNormalizer implements Normalizer {
 		}
 		return number;
 	}
-
 }
