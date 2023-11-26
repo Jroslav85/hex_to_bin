@@ -25,6 +25,21 @@ public class Main {
 
         console.close();
     }
+	
+	private static String enteringBinNumber(Scanner console) {
+		String binaryNumber;
+        while (true) {
+            try {
+                BinaryNumberNormalizer bnv = new BinaryNumberNormalizer(
+                        console.next());
+                binaryNumber = bnv.getCorrectNumber(bnv.getBinaryNumber());
+                break;
+            } catch (Exception e) {
+                System.out.println("ошибка ввода, еще раз ");
+            }
+        }
+		return binaryNumber;
+	}
 
 	private static String enteringHexNumber(Scanner console) {
 		String hexNumber;
@@ -40,18 +55,5 @@ public class Main {
 		return hexNumber;
 	}
 
-	private static String enteringBinNumber(Scanner console) {
-		String binaryNumber;
-        while (true) {
-            try {
-                BinaryNumberNormalizer bnv = new BinaryNumberNormalizer(
-                        console.next());
-                binaryNumber = bnv.getCorrectNumber(bnv.getBinaryNumber());
-                break;
-            } catch (Exception e) {
-                System.out.println("ошибка ввода, еще раз ");
-            }
-        }
-		return binaryNumber;
-	}
+
 }
