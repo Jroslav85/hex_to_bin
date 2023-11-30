@@ -19,7 +19,7 @@ class HexNumberNormalizer implements Normalizer {
 	
 	private String setCorrectNumber(String number) throws RuntimeException {
 		if (number.matches("^[1-9a-f][\\da-f]*$")) {
-			return number;
+			return this.hexNumber = number;
 		} else {
 			throw new RuntimeException();
 		}
