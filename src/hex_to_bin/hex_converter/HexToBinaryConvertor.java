@@ -1,9 +1,11 @@
-package hex_to_bin;
+package hex_to_bin.hex_converter;
 
 import static java.util.Map.entry;
 import java.util.Map;
 
-public class HexToBinaryConvertor implements Convertor {
+import hex_to_bin.Convertor;
+
+class HexToBinaryConvertor implements Convertor {
 	
 	private static final Map<String, String> MASK_HEX = Map.ofEntries(entry("0", "0000"), entry("1", "0001"),
 			entry("2", "0010"), entry("3", "0011"), entry("4", "0100"), entry("5", "0101"), entry("6", "0110"),
@@ -12,11 +14,11 @@ public class HexToBinaryConvertor implements Convertor {
 
 	@Override
 	public String convert(String number) {
-		String binaryString = "";
+		StringBuilder binaryString = new StringBuilder();
 		String[] hexArray = number.split("");
 		for (String str : hexArray) {
-			binaryString += MASK_HEX.get(str);
+			binaryString.append(MASK_HEX.get(str));
 		}
-		return binaryString;
+		return binaryString.toString();
 	}
 }
