@@ -7,8 +7,8 @@ import hex_to_bin.hex_converter.HexToBinaryTransformation;
 
 public class Main {
 	
-	public static BinaryToHexTransformation binTransformation = new BinaryToHexTransformation();
-	public static HexToBinaryTransformation hexTransformation = new HexToBinaryTransformation();
+	private static BinaryToHexTransformation binTransformation = new BinaryToHexTransformation();
+	private static HexToBinaryTransformation hexTransformation = new HexToBinaryTransformation();
 
 	public static void main(String[] args) {
 		try (Scanner console = new Scanner(System.in)) {
