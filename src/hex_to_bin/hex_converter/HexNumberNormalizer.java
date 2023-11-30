@@ -11,7 +11,6 @@ class HexNumberNormalizer implements Normalizer {
 		setCorrectNumber(number);
 	}
 
-
 	@Override
 	public String getCorrectNumber() throws RuntimeException {
 		return this.hexNumber;
